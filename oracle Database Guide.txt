@@ -1,0 +1,16 @@
+Oracle Database Guide
+
+
+# for creating new database in orcale and give all the permissions
+CREATE USER DataBaseName IDENTIFIED BY DataBasePassword;
+ALTER USER DataBaseName QUOTA unlimited ON SYSTEM;
+GRANT CREATE SESSION, CONNECT, RESOURCE, DBA TO DataBaseName;
+GRANT ALL PRIVILEGES TO DataBaseName;
+
+Eg. Database name - NewDatabase
+	Database Password - abc$123
+
+	CREATE USER NewDatabase IDENTIFIED BY abc$123;
+	ALTER USER NewDatabase QUOTA unlimited ON SYSTEM;
+	GRANT CREATE SESSION, CONNECT, RESOURCE, DBA TO NewDatabase;
+	GRANT ALL PRIVILEGES TO NewDatabase;

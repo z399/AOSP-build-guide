@@ -1,0 +1,90 @@
+## Basic setup in Ubuntu
+====================================================
+
+## Set python as default for python3
+Open terminal
+
+$ nano ~/.bashrc"
+
+# Type "alias python=python3" on new line at the top of the file
+# save the file and close
+
+$ source ~/.bashrc
+
+# Done
+
+## Set pip3 as default
+
+$ nano ~/.bashrc
+# Type "alias pip=pip3" on new line at the top of the file
+# save the file and close
+
+$ source ~/.bashrc
+
+# Done
+--------------------------------------------------------------
+
+## Pycharm Error After installation and for running first program
+Error = ModuleNotFoundError: No module named 'distutils.core'
+open terminal
+Install the packages two packages below:
+sudo apt-get install python3-distutils
+sudo apt install python3-pip / sudo apt install python-pip
+For python3 & python2 respectively.
+Done
+-----------------------------------------------------------
+
+
+## Finding the cores of cpu
+===========================
+# count no of CPUs
+
+$ cat /proc/cpuinfo | grep processor | wc -l
+
+# Output :
+# 2
+
+# To check the number of cores !
+
+$ cat /proc/cpuinfo | grep 'core id'
+
+$ nproc
+
+# 2
+
+--------------------------------------------------------------
+==============================================================
+## XAMPP installation
+
+# Download - https://www.apachefriends.org/index.html
+
+# Make the installation package executable
+# $ chmod 755 [package name]
+
+$ chmod 755 xampp*
+
+# Confirm execute permission // "$ ls -l" ----- for permission check 
+$ ls -l xampp*
+
+# The -rwxr output shows that the file can be executed by the user 
+# whose name is also mentioned in the output.
+
+# Launch the Setup Wizard
+# $ sudo ./[package name]
+
+$ sudo ./xampp*
+
+# It will start the process ..
+# ref : "https://vitux.com/how-to-install-xampp-on-your-ubuntu-20-04-lts-system/"
+
+## XAMPP installed path = "/opt/lampp"
+
+# Launch XAMPP through the Terminal
+$ sudo /opt/lampp/lampp start
+
+# Verify Installation
+-- Put this url in browser: "http://localhost"
+
+# In order to install Net Tools, run the following command as root:
+$ sudo apt install net-tools
+--------------------------------------------------------------------------------
