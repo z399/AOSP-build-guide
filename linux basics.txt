@@ -1,5 +1,5 @@
 ## Basic setup in Ubuntu
-====================================================
+========================
 
 ## Set python as default for python3
 Open terminal
